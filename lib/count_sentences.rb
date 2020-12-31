@@ -15,10 +15,9 @@ class String
   end
 
   def count_sentences
-    raw_array=sent.split(/[.?!]/)
-    final_array=raw_array.split("!")
-
-
-    binding.pry
+    raw_array=self.split(/[.?!]/)
+    final_array=raw_array.delete_if {|i| i ==""}
+    final_count=final_array.count
+    final_count
   end
 end
